@@ -92,6 +92,9 @@
 /* Freq ID 4 in Java requires more voltage than normal.
    So, initialize voltage for FID4 with TURBO */
 
+/* Freq ID 4 in Java requires more voltage than normal.
+   So, initialize voltage for FID4 with TURBO */
+
 #ifdef CONFIG_CPU_SYSPLL_WFI_CSTATE
 #if (CPU_FREQ_ID_SYSPLL_WFI == PROC_CCU_FREQ_ID_XTAL)
 #define PROC_CCU_FREQ_VOLT_TBL	\
