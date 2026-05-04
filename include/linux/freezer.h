@@ -298,3 +298,28 @@ static inline void set_freezable(void) {}
 #endif /* !CONFIG_FREEZER */
 
 #endif	/* FREEZER_H_INCLUDED */
+
+#ifndef freezable_schedule_hrtimeout_range
+#define freezable_schedule_hrtimeout_range(expires, delta, mode) \
+    schedule_hrtimeout_range(expires, delta, mode)
+#endif
+
+#ifndef freezable_schedule_hrtimeout
+#define freezable_schedule_hrtimeout(expires, mode) \
+    schedule_hrtimeout(expires, mode)
+#endif
+
+#ifndef freezable_schedule_timeout_interruptible
+#define freezable_schedule_timeout_interruptible(timeout) \
+    schedule_timeout_interruptible(timeout)
+#endif
+
+#ifndef freezable_schedule
+#define freezable_schedule() \
+    schedule()
+#endif
+
+#ifndef freezable_schedule_timeout
+#define freezable_schedule_timeout(timeout) \
+    schedule_timeout(timeout)
+#endif
